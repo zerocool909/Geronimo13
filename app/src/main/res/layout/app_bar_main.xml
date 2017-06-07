@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codenerds.zerocool.geronimo13.MainActivity">
+
+
+    <include layout="@layout/content_main" />
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:weightSum="1">
+
+        <android.support.v7.widget.Toolbar
+
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:visibility="visible">
+
+                <!-- This is a centered logo -->
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="120dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/namelogo" />
+
+                <!-- This is a centered title -->
+                <!--
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                />
+                -->
+
+                <!-- This is a custom left side button -->
+                <!--
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginRight="?attr/actionBarSize"
+                android:layout_gravity="start|center_vertical"
+                android:visibility="invisible"
+                android:src="@drawable/ic_settings_white_24dp"
+                style="@style/Widget.AppCompat.ActionButton" />
+                -->
+
+
+                <ImageButton
+                    android:id="@+id/btn_call"
+                    style="@style/Widget.AppCompat.ActionButton"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_call" />
+
+
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
